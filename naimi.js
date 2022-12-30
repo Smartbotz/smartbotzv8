@@ -4267,7 +4267,7 @@ if (!text) return reply ('Masukan Link Tiktoknya')
 reply(mess.wait)
 api = await fetchJson(`https://saipulanuar.ga/api/download/tiktok?url=${q}`)
 res = api.result
-naimi.sendMessage(from, { video: { url: res.video }, mimetype: 'video/mp4'}, { quoted: m })
+naimi.sendMessage(from, { video: { url: res.video_original }, mimetype: 'video/mp4'}, { quoted: m })
 }
 break
 case 'tiktokaudio': {
@@ -4277,7 +4277,7 @@ if (!text) return reply ('Masukan Link Tiktoknya')
 reply(mess.wait)
 api = await fetchJson(`https://saipulanuar.ga/api/download/tiktok?url=${q}`)
 res = api.result
-naimi.sendMessage(from, { audio: { url: res.audio }, mimetype: 'audio/mpeg'}, { quoted: m })
+naimi.sendMessage(from, { audio: { url: res.audio_original }, mimetype: 'audio/mpeg'}, { quoted: m })
 }
 break
 case 'fbdl':
