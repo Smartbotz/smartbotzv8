@@ -3,7 +3,8 @@ const { default: naimiConnect, useSingleFileAuthState, DisconnectReason, generat
 const fs = require('fs')
 let setting = JSON.parse(fs.readFileSync('./src/setting.json'))
 let welkom = JSON.parse(fs.readFileSync('./database/group/welcome.json'))
-const { state, saveState } = useSingleFileAuthState(`./${setting.sessionName}.json`)
+let sesi = `${setting.sessionName}.json`
+const { state, saveState } = useSingleFileAuthState(sesi)
 const pino = require('pino')
 const chalk = require('chalk')
 const FileType = require('file-type')
